@@ -65,7 +65,7 @@ describe("Bot AI Application", () => {
  describe('Bot AI Application Behaviour', () => {
   beforeEach(() => {
     // Load the application
-    cy.visit('http://localhost:3000/');
+    cy.visit('http://localhost:3000');
   });
  
  
