@@ -103,7 +103,7 @@ export default function Chat({ onMenuOpen }) {
       <form className="chat-form" onSubmit={handleAsk}>
         <input
           className="chat-input"
-          placeholder="Message Bot AI…"
+          placeholder="Message Bot AI..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />

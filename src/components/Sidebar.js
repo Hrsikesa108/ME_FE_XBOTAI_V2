@@ -11,9 +11,9 @@ export default function Sidebar({ isOpen, onClose, onNewChat }) {
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-top">
         <div className="sidebar-icon">🤖</div>
-        <button className="sidebar-new-chat" onClick={handleNewChat}>
+        <Link to="/" className="sidebar-new-chat" onClick={handleNewChat}>
           New Chat
-        </button>
+        </Link>
       </div>
 
       <Link to="/history" className="history-link" onClick={handleClose}>
