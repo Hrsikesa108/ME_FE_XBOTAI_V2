@@ -4,6 +4,12 @@ import Sidebar from "../components/Sidebar";
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [chatKey, setChatKey] = useState(0);
+
+  const handleNewChat = () => {
+    setChatKey((k) => k + 1);
+    setSidebarOpen(false);
+  };
 
   return (
     <div className="app">
@@ -16,8 +22,9 @@ export default function Home() {
       <Sidebar
         isOpen={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
+        onNewChat={handleNewChat}
       />
-      <Chat onMenuOpen={() => setSidebarOpen(true)} />
+      <Chat key={chatKey} onMenuOpen={() => setSidebarOpen(true)} />
     </div>
   );
 }

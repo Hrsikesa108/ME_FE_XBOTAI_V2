@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 
-export default function Sidebar({ isOpen, onClose }) {
-  const handleClose = () => {
-    if (onClose) {
-      onClose();
-    }
+export default function Sidebar({ isOpen, onClose, onNewChat }) {
+  const handleClose = () => onClose && onClose();
+
+  const handleNewChat = () => {
+    onNewChat && onNewChat();
   };
 
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-top">
         <div className="sidebar-icon">🤖</div>
-        <Link to="/" className="sidebar-new-chat">
+        <button className="sidebar-new-chat" onClick={handleNewChat}>
           New Chat
-        </Link>
+        </button>
       </div>
 
       <Link to="/history" className="history-link" onClick={handleClose}>
