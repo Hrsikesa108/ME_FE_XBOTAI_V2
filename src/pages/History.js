@@ -18,7 +18,7 @@ export default function History() {
               <path d="M15 19l-7-7 7-7" />
             </svg>
           </Link>
-          <h2>Conversation History</h2>
+          <h2>Past Conversations</h2>
         </div>
 
         {/* Rating filter */}

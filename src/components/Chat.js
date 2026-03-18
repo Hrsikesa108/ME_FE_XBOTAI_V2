@@ -71,9 +71,9 @@ export default function Chat({ onMenuOpen }) {
       </div>
 
       {/* Desktop header — hidden on mobile */}
-      <div className="chat-header">
+      <header className="chat-header">
         <h1 className="app-title">Bot AI</h1>
-      </div>
+      </header>
 
       {messages.length === 0 ? (
         <div className="empty-state">
